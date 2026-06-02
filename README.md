@@ -1,6 +1,8 @@
 # 🧮 Calculator
 
 ## 🚀Live Demo
+ https://anithakupppusamy.github.io/Calculator/
+ 
 A simple and responsive calculator built using **HTML**, **CSS**, and **JavaScript**. This project performs basic arithmetic operations and provides a clean user interface with a modern dark theme.
 
 ## 🚀 Features
