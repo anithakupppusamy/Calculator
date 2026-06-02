@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calci.css">
+    <title>calculator</title>
+
+</head>
+
+<body>
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+
+        <div class="buttons">
+
+            <div class="row0">
+                <button onclick="clearDisplay('C')">C</button>
+                <button onclick="percentage('%')">%</button>
+                <button onclick="appendValue('^')">^</button>
+                <button onclick="appendValue('+')">+</button>
+            </div>
+
+            <div class="row1">
+                <button onclick="appendValue('7')">7</button>
+                <button onclick="appendValue('8')">8</button>
+                <button onclick="appendValue('9')">9</button>
+                <button onclick="appendValue('*')">*</button>
+            </div>
+            <div class="row2">
+                <button onclick="appendValue('4')">4</button>
+                <button onclick="appendValue('5')">5</button>
+                <button onclick="appendValue('6')">6</button>
+                <button onclick="appendValue('-')">-</button>
+            </div>
+
+            <div class="row3">
+                <button onclick="appendValue('1')">1</button>
+                <button onclick="appendValue('2')">2</button>
+                <button onclick="appendValue('3')">3</button>
+                <button onclick="appendValue('/')">/</button>
+            </div>
+            <div class="row4">
+                <button onclick="appendValue('0')">0</button>
+                <button onclick="backspace('⌫')">⌫</button>
+                <button onclick="appendValue('.')">.</button>
+                <button class="equal-btn" onclick="calculate()">=</button>
+
+            </div>
+
+        </div>
+        <script>
+        
+let display = document.getElementById("display");
+
+function appendValue(value){
+    display.value += value;
+}
+
+function clearDisplay(){
+    display.value = "";
+}
+
+function backspace(value){
+    display.value = display.value.slice(0, -1);
+}
+
+function calculate(){
+    try{
+        let expression = display.value.replace("^","**");
+        display.value = eval(expression);
+    }
+    catch{
+        display.value = "Error";
+    }
+}
+
+function percentage(){
+    try{
+        display.value = eval(display.value) / 100;
+    }
+    catch{
+        display.value = "Error";
+    }
+}
+
+    </script>
+</body>
+
+</html>
