@@ -29,13 +29,13 @@ A simple and responsive calculator built using **HTML**, **CSS**, and **JavaScri
 ## 📂 Project Structure
 
 ```text
-calculator/
+Calculator/
 │
-├── calci.html
+├── index.html
 ├── calci.css
-└── README.md
-```
-
+├── README.md
+└── assets/
+    └── background-video.mp4
 ## ⚙️ How It Works
 
 - Numbers and operators are appended to the display.
